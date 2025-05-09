@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Ubicación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleMain.css') }}">
+</head>
+<body>
+    <h1>Enviar mi ubicacion</h1>
+    <div id="aZona" class="aZona">
+        <h3>Zona Segura (mantenerse al tanto)</h3>
+    </div>
+    <button id="alerta" class="alerta" onclick="enviarUbicacion()">Enviar alerta!!</button>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik"></script>
+    <script src="{{url_for('static', filename='/js/scriptMap.js')}}"></script>
+</body>
+</html>

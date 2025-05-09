@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C5 Operadores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleMain.css') }}">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik"></script>
+    <script src="{{ url_for('static', filename='/js/scriptConsul.js') }}" defer></script>
+</head>
+<body>
+    <h1>Ubicaciones de incidencias</h1>
+    <table border="1" >
+        <tr>
+            <th>ID</th>
+            <th>Latitud</th>
+            <th>Longitud</th>
+            <th>Timestamp</th>
+            <th>Acción</th>
+        </tr>
+        {% for ubicacion in ubicaciones %}
+        <tr>
+            <td>{{ ubicacion[0] }}</td>
+            <td>{{ ubicacion[1] }}</td>
+            <td>{{ ubicacion[2] }}</td>
+            <td>{{ ubicacion[3] }}</td>
+            <td>
+                <button onclick="mostrarMapa()">Ver mapa</button>
+            </td>
+        </tr>
+        {{% endfor %}}
+    </table>
+    <br>
+    <a href="{{ url_for('auth.logout') }}">Cerrar Sesion</a>
+    <div id="mapModal">
+        <button onclick="cerrarMapa()">Cerrar</button>
+        <div id="map" ></div>
+    </div>
+</body>
+</html>
