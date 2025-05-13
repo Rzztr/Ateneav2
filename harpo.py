@@ -2,8 +2,8 @@ import os
 import bcrypt
 
 # Definir ruta Padre
-    #donde se almacena su archivo env
-    #logs de boton y de inicios de sesion...
+#donde se almacena su archivo env
+#logs de boton y de inicios de sesion...
 PATH_DIR = os.path.join(os.path.dirname(__file__), "usrs")
 
 class Harpo:
@@ -47,6 +47,6 @@ class Harpo:
         print(passHashing)
         return passHashing
 
-gestor =Harpo(nomUsuario='RELC040721HASYPHA4', passUser='1234abcde')
-gestor.mkdiruser()
-gestor.hashPassword('12345678990')
+#gestor =Harpo(nomUsuario='RELC040721HASYPHA4', passUser='1234abcde')
+#gestor.mkdiruser()
+#gestor.hashPassword('12345678990')

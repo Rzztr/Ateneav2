@@ -1,6 +1,8 @@
-from flask import Flask
-from flask_hashing import Hashing
+#from flask import Flask
+#from flask_hashing import Hashing
 
+
+'''
 app = Flask(__name__)
 hashing = Hashing(app)
 
@@ -9,3 +11,6 @@ if hashing.check_value(h, 'secretdata', salt='abcd'):
     print('lol')
 else: 
     print('no')
+'''
+
+

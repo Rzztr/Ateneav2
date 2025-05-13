@@ -1,7 +1,7 @@
 let map, marker, latitud, longitud;
 
 // Inicializar el mapa con ubicación obtenida
-function initMap(lat = 19.432608, lng = -99.133209) {
+function initMap(lat = 21.880458, lng = -102.296274) {
   const mapOptions = {
     zoom: 15,
     center: { lat: lat, lng: lng },
